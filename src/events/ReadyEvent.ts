@@ -5,7 +5,7 @@ import { Bot } from '../entities/Client';
 export default new class ReadyEvent {
   public name = "ready"
 
-  public async start(client: Bot): Promise<void> {
+  public async invoke(client: Bot): Promise<void> {
     dashboard(client)
 
     try {
