@@ -8,7 +8,6 @@ class Bot extends Client {
   ){
     super({ ws: { intents: Intents.ALL }, messageCacheMaxSize: 200, messageCacheLifetime: 180, messageEditHistoryMaxSize: 180 })
     this.event.handle()
-    this.event.handleWebsockets()
     this.login(this.config.token)
 
     if (this.config.debug) this.on('debug', info => console.log(info))
