@@ -7,6 +7,7 @@ import passport from 'passport';
 import config from '../config';
 import express from 'express';
 import routes from './routes';
+import apiRotes from './api.routes';
 import path from 'path';
 
 export default (client) => {
@@ -55,7 +56,8 @@ export default (client) => {
   app.use(passport.session());
   
   app.use(express.json());
-  app.use(routes);
+  app.use(process.env.API_ENDPOINT, apiRoutes);
+  app.use(process.env.FRONT_ENDPOINT, routes);
 
   app.listen(port, () => events.emit("SERVER_READY", port))
 }
