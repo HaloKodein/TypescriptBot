@@ -10,6 +10,9 @@
   "keywords": [],
   "author": "codein-purple <zeca.pirokinha@gmail.com>",
   "license": "MIT",
+  "engines": {
+    "node": "12.x"
+  },
   "dependencies": {
     "@types/node": "^14.14.27",
     "body-parser": "^1.19.0",
